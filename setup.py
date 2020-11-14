@@ -8,7 +8,7 @@ setup(
     version="0.1.0",
     description="A django model abstract class for creating random int primary keys.",
     long_description=long_description,
-    long_description_content_type="text/x-md",
+    long_description_content_type="text/markdown",
     url="https://github.com/samirelanduk/django-random-id-model",
     author="Sam Ireland",
     author_email="mail@samireland.com",

@@ -2,6 +2,9 @@ from random import randint
 from django.db import models
 from django.conf import settings
 
+__author__ = "Sam Ireland"
+__version__ = "0.1.0"
+
 class RandomIDModel(models.Model):
     """Provides a custom ID primary key field - a random digit integer."""
 

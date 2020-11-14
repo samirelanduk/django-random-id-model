@@ -34,6 +34,8 @@ print(customer1.id) # '725393588906066'
 print(customer2.id) # '905529381860540'
 ```
 
+The ID is guaranteed to be unique.
+
 By default the ID will be 15 digits long, but you can override this in
 settings.py with the `ID_DIGITS_LENGTH` setting.
 
