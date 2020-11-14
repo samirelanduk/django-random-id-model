@@ -1,5 +1,6 @@
 from random import randint
 from django.db import models
+from django.conf import settings
 
 class RandomIDModel(models.Model):
     """Provides a custom ID primary key field - a random digit integer."""
@@ -13,7 +14,9 @@ class RandomIDModel(models.Model):
         """If the user hasn't provided an ID, generate one at random and check
         that it has not been taken."""
         
-        digits = 18
+        try:
+            digits = settings.ID_DIGITS_LENGTH
+        except: digits = 12
         if not self.id:
             is_unique = False
             while not is_unique:
