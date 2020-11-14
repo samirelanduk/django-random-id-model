@@ -1,0 +1,9 @@
+*.pyc
+__pycache__
+.DS_Store
+_static
+_templates
+build
+dist
+*.egg-info
+*.sqlite3
