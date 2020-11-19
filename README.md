@@ -9,7 +9,7 @@ For example, this is the vanilla way to do primary keys:
 from django.db import models
 
 class Customer(models.Model):
-    name = models.CharField(max_length)
+    name = models.CharField(max_length=50)
 
 customer1 = Customer.objects.create(name="John")
 customer2 = Customer.objects.create(name="Jane")
@@ -26,7 +26,7 @@ from django.db import models
 from django_random_id_model import RandomIDModel
 
 class Customer(RandomIDModel):
-    name = models.CharField(max_length)
+    name = models.CharField(max_length=50)
 
 customer1 = Customer.objects.create(name="John")
 customer2 = Customer.objects.create(name="Jane")
