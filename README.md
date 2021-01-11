@@ -36,8 +36,34 @@ print(customer2.id) # '905529381860540'
 
 The ID is guaranteed to be unique.
 
-By default the ID will be 15 digits long, but you can override this in
+By default the ID will be 12 digits long, but you can override this in
 settings.py with the `ID_DIGITS_LENGTH` setting.
 
 `RandomIDModel` inherits directly from `models.Model` and does not interfere
-with anything else, so you can use it wherever you would use `models.Model`. 
+with anything else, so you can use it wherever you would use `models.Model`.
+
+## Forms and Admin
+
+To integrate your model with a Django ModelForm, you will need to manually
+exclude the `id` field:
+
+```python
+from django.forms import ModelForm
+
+class CustomerForm(ModelForm):
+
+    class Meta:
+        model = Customer
+        exclude = ["id"]
+```
+
+Likewise if you use the Django Admin app:
+
+```python
+from django.contrib import admin
+
+class CustomerAdmin(admin.ModelAdmin):
+    exclude = ["id"]
+
+admin.site.register(Customer, CustomerAdmin)
+```
