@@ -18,7 +18,7 @@ class RandomIDModel(models.Model):
     class Meta:
         abstract = True
 
-    id = models.BigIntegerField(primary_key=True)
+    id = models.PositiveBigIntegerField(primary_key=True)
 
     def save(self, *args, **kwargs):
         """If the user hasn't provided an ID, generate one at random and check
