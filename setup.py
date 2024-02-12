@@ -5,7 +5,7 @@ with open("README.md") as f:
 
 setup(
     name="django_random_id_model",
-    version="0.1.1",
+    version="0.2.0",
     description="A django model abstract class for creating random int primary keys.",
     long_description=long_description,
     long_description_content_type="text/markdown",
